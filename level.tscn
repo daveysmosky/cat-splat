@@ -1,0 +1,136 @@
+[gd_scene load_steps=13 format=3 uid="uid://utyo4h3vqk2c"]
+
+[ext_resource type="Script" uid="uid://53enc8wcrygj" path="res://level.gd" id="1_oi3di"]
+[ext_resource type="Texture2D" uid="uid://cf23erxhu6mbd" path="res://assets/level_background_pixel.png" id="1_u52ul"]
+[ext_resource type="PhysicsMaterial" uid="uid://wu2babp342cu" path="res://level_physics.tres" id="1_vonw3"]
+[ext_resource type="Script" uid="uid://b054wbn41mqjm" path="res://game_over_screen.gd" id="4_1ainy"]
+[ext_resource type="FontFile" uid="uid://bds41xexwdhpr" path="res://fonts/Pixel Game.otf" id="4_f2txt"]
+[ext_resource type="Texture2D" uid="uid://3w355eu3nv6h" path="res://assets/level_foreground_pixel.png" id="6_1ainy"]
+[ext_resource type="Texture2D" uid="uid://ba4ak7r2rsbs2" path="res://assets/do_drugs_half.png" id="6_8cye3"]
+[ext_resource type="AudioStream" uid="uid://dolusfnod7rqg" path="res://assets/level_music.mp3" id="7_n6hdu"]
+[ext_resource type="AudioStream" uid="uid://c7oxju0qug3t7" path="res://assets/mob/meow.mp3" id="8_i2t4f"]
+[ext_resource type="AudioStream" uid="uid://bmcuw2fnc1as5" path="res://assets/mob/splat.mp3" id="9_8cye3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(32, 232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgngl"]
+size = Vector2(80.00001, 1488)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_oi3di")
+
+[node name="LevelBackground" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 10976.728
+offset_bottom = 1246.2786
+scale = Vector2(0.12890625, 0.6171875)
+texture = ExtResource("1_u52ul")
+
+[node name="TreeWallLeft" type="StaticBody2D" parent="." groups=["wall"]]
+position = Vector2(1136, 104)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeWallLeft" groups=["wall"]]
+position = Vector2(-848, -8)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="TreeWallRight" type="StaticBody2D" parent="." groups=["wall"]]
+position = Vector2(288, 96)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeWallRight" groups=["wall"]]
+position = Vector2(848, 8)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="TreeBranch" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+physics_material_override = ExtResource("1_vonw3")
+
+[node name="TreeCollisionShape" type="CollisionPolygon2D" parent="TreeBranch"]
+position = Vector2(664, 352)
+scale = Vector2(3.7626262, 0.85937583)
+polygon = PackedVector2Array(-99.93019, -204.79979, -93.55167, -223.41795, -59.532875, -232.72704, -48.902008, -214.10887, -27.640259, -214.10887, 0, -223.41795, 17.0094, -242.03612, 40.397324, -242.03612, 63.785233, -232.72704, 94.22685, -196.65459, 114.813416, -176.87256, 125.444305, -158.2544, 36, -184, -32, -168)
+
+[node name="Floor" type="StaticBody2D" parent="." groups=["floor"]]
+collision_layer = 8
+collision_mask = 3
+physics_material_override = ExtResource("1_vonw3")
+
+[node name="FloorCollisionShape" type="CollisionShape2D" parent="Floor"]
+position = Vector2(672, 639.99994)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_cgngl")
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="MobStartPosition1" type="Node2D" parent="."]
+position = Vector2(864, 80)
+
+[node name="MobStartPosition2" type="Node2D" parent="."]
+position = Vector2(664, 80)
+
+[node name="MobStartPosition3" type="Node2D" parent="."]
+position = Vector2(432, 96)
+
+[node name="PlayerStartPosition" type="Node2D" parent="."]
+position = Vector2(816, 480)
+
+[node name="GameOverScreen" type="ColorRect" parent="."]
+top_level = true
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("4_1ainy")
+
+[node name="GameOverMessage" type="Label" parent="GameOverScreen"]
+layout_mode = 0
+offset_top = 256.0
+offset_right = 1152.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("4_f2txt")
+theme_override_font_sizes/font_size = 58
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="GameOverScreen"]
+wait_time = 0.5
+
+[node name="LevelForeground" type="TextureRect" parent="."]
+top_level = true
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 1408.0
+offset_bottom = 760.0
+texture = ExtResource("6_1ainy")
+
+[node name="LevelMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_n6hdu")
+volume_db = 15.0
+
+[node name="SplatSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_8cye3")
+
+[node name="MeowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_i2t4f")
+
+[node name="DoDrugs" type="TextureRect" parent="."]
+visible = false
+top_level = true
+offset_right = 2304.0
+offset_bottom = 1296.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_8cye3")
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="GameOverScreen/BlinkTimer" to="GameOverScreen" method="_on_blink_timer_timeout"]

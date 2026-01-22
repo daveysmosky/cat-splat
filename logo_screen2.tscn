@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dybfb6pp036t5"]
+
+[ext_resource type="Texture2D" uid="uid://dt2ta4hpc4bjr" path="res://assets/logo/sinister_grin_pix_invert.png" id="2_wnxfs"]
+[ext_resource type="Texture2D" uid="uid://dab8c2phm6l42" path="res://assets/logo/sinister_grin_pix_trans.png" id="3_hfhbe"]
+
+[sub_resource type="GDScript" id="GDScript_iu5j1"]
+script/source = "extends CanvasLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$AnimationStartTimer.start()
+	await $AnimationStartTimer.timeout
+	$LogoStandard.show()
+	await get_tree().create_timer(1.5)
+	$LogoStandard.hide()
+	$LogoInvert.show()
+	await get_tree().create_timer(1.5)
+	$LogoInvert.hide()
+	$LogoStandard.show()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="LogoScreen" type="CanvasLayer"]
+script = SubResource("GDScript_iu5j1")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="LogoStandard" type="CanvasGroup" parent="."]
+visible = false
+metadata/_edit_group_ = true
+
+[node name="LogoSprite" type="Sprite2D" parent="LogoStandard"]
+position = Vector2(576, 320)
+texture = ExtResource("2_wnxfs")
+
+[node name="LogoInvert" type="CanvasGroup" parent="."]
+visible = false
+metadata/_edit_group_ = true
+
+[node name="Background" type="ColorRect" parent="LogoInvert"]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="LogoSprite" type="Sprite2D" parent="LogoInvert"]
+position = Vector2(576, 320)
+texture = ExtResource("3_hfhbe")
+
+[node name="AnimationStartTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true

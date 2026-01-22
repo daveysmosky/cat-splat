@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ypq8sglqoa7"]
+
+[ext_resource type="FontFile" uid="uid://bds41xexwdhpr" path="res://fonts/Pixel Game.otf" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://dblt2jkdqxd14" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://gkfkgdjpqgte" path="res://assets/pause_menu/pawsed_pix.png" id="3_05uyy"]
+[ext_resource type="AudioStream" uid="uid://bu3awlescfyp0" path="res://assets/pause_menu/pause_sound.mp3" id="4_p81d2"]
+
+[node name="PauseMenu" type="ColorRect"]
+process_mode = 3
+top_level = true
+light_mask = 4
+visibility_layer = 4
+custom_minimum_size = Vector2(10, 10)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_nwcfo")
+metadata/_edit_group_ = true
+
+[node name="PauseSprite" type="Sprite2D" parent="."]
+position = Vector2(576, 216)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_05uyy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 432.0
+offset_right = 1152.0
+offset_bottom = 512.0
+metadata/_edit_group_ = true
+
+[node name="ResumeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 36
+text = "- Resume -"
+horizontal_alignment = 1
+
+[node name="QuitLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+horizontal_alignment = 1
+
+[node name="PauseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_p81d2")

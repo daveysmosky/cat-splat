@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=3 uid="uid://1y821ls15obk"]
+
+[ext_resource type="Script" uid="uid://fkoe684678li" path="res://start_menu.gd" id="1_ia0g5"]
+[ext_resource type="FontFile" uid="uid://bds41xexwdhpr" path="res://fonts/Pixel Game.otf" id="2_ctwoq"]
+[ext_resource type="Script" uid="uid://c4km6bqg6qfjf" path="res://splash_path.gd" id="2_v2mkm"]
+[ext_resource type="Script" uid="uid://bhr0q61lp1l17" path="res://start_button.gd" id="3_ctwoq"]
+[ext_resource type="AudioStream" uid="uid://dtb1ijwn282y5" path="res://assets/game_start.mp3" id="4_pgi0o"]
+[ext_resource type="Texture2D" uid="uid://cqsnyaxnfamdm" path="res://assets/cat_splat_splash_screen_lo_trans0.png" id="5_ctwoq"]
+[ext_resource type="Texture2D" uid="uid://0bj1frc6faru" path="res://assets/cat_splat_splash_screen_lo_trans1.png" id="6_7boi2"]
+[ext_resource type="Texture2D" uid="uid://bicofbc1m04rg" path="res://assets/cat_splat_splash_screen_lo_trans2.png" id="7_pgi0o"]
+[ext_resource type="AudioStream" uid="uid://dfysjtwro1lh1" path="res://assets/start_menu_8bit.mp3" id="9_73a2t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppfnh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7boi2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgi0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_73a2t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xsckg"]
+
+[sub_resource type="Curve2D" id="Curve2D_ia0g5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 256, 0, 0, 568, 256)
+}
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73a2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ctwoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7boi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pgi0o")
+}],
+"loop": true,
+"name": &"flash",
+"speed": 10.0
+}]
+
+[node name="StartMenu" type="CanvasLayer"]
+script = ExtResource("1_ia0g5")
+
+[node name="SplashScreenTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0, 0, 1)
+
+[node name="StartButton" type="Button" parent="."]
+offset_top = 520.0
+offset_right = 1152.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("2_ctwoq")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ppfnh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7boi2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pgi0o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_73a2t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xsckg")
+action_mode = 0
+text = "PRESS ENTER TO START"
+script = ExtResource("3_ctwoq")
+
+[node name="TextBlinkTimer" type="Timer" parent="StartButton"]
+wait_time = 0.5
+
+[node name="StartSound" type="AudioStreamPlayer2D" parent="StartButton"]
+stream = ExtResource("4_pgi0o")
+
+[node name="SplashPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ia0g5")
+script = ExtResource("2_v2mkm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="SplashPath"]
+rotation = 0.7335927
+rotates = false
+loop = false
+
+[node name="SplashScreen" type="AnimatedSprite2D" parent="SplashPath/PathFollow2D"]
+sprite_frames = SubResource("SpriteFrames_73a2t")
+animation = &"flash"
+
+[node name="MenuVibes" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_73a2t")
+parameters/looping = true
+
+[connection signal="timeout" from="SplashScreenTimer" to="." method="_on_splash_screen_timer_timeout"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="StartButton/TextBlinkTimer" to="StartButton" method="_on_text_blink_timer_timeout"]

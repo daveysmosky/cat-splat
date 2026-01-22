@@ -1,0 +1,14 @@
+res://hud.tscn::bcf5d1c81996783eaa48a728a55262ed::1765227967::res://.godot/exported/133200997/export-f4cf891e5f7a93b93d9b27cfb8401ccb-hud.scn
+res://level.tscn::07569eb2d1feb62287e593d50362505b::1765589649::res://.godot/exported/133200997/export-d85448a68f01bbd6644b4b40ef87233e-level.scn
+res://level_physics.tres::5d0d7567c25d822a75ba087e71f01592::1763940318::res://.godot/exported/133200997/export-ff8f8e75ddec9d18e18ae42c2cbb168d-level_physics.res
+res://logo_screen2.tscn::4bb0f5d033faad976b9a6b2cf096750d::1765390022::res://.godot/exported/133200997/export-0b7ac42a803847a12abbfa979efa98a0-logo_screen2.scn
+res://logo_screen.tscn::9d2d9c856260d7328ed869e9d39da929::1764971611::res://.godot/exported/133200997/export-16a74110abb5fe72e3ca87b7e0cc1fa2-logo_screen.scn
+res://main.tscn::42d1d0e6b14b527b3c33e2e5f86752ab::1765164937::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://mob.tres::11147a41a434fc55004e504d06078330::1764537288::res://.godot/exported/133200997/export-631a9ad80c91f616eb91c0fc59bd9493-mob.res
+res://mob_grey.tscn::52051f5aca4a71f53f9c8fb39faeceb7::1765590802::res://.godot/exported/133200997/export-88a9fa11099cc0d232eef2b35ca7e3b6-mob_grey.scn
+res://mob_orange.tscn::66d976e08b57b86f182dcab15dc667f9::1765590489::res://.godot/exported/133200997/export-9eaccb490e5c5dd32fb1a96e7581bc6d-mob_orange.scn
+res://mob_white.tscn::473cc2b527cf4ce46d54719a8a3f5de1::1765590629::res://.godot/exported/133200997/export-eedb6b3d8ec08913f6bc45f5d5e3a9eb-mob_white.scn
+res://pause_menu.tscn::ed21983d217509b31f74aff35c22a621::1765390349::res://.godot/exported/133200997/export-8f8844d4375fca029c0f20cf6f905ea1-pause_menu.scn
+res://player.tres::09317a6e3d8700b62eec8b11fc39cbcb::1764537263::res://.godot/exported/133200997/export-0b6771c05d43512051d87073b70547d5-player.res
+res://player.tscn::a16fb7ffc8fc9f3b8508b920a8524be1::1769045405::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://start_menu.tscn::4e109d0f7d0f2003041ec4b717a3fa53::1765228362::res://.godot/exported/133200997/export-6ef4cc1f92f36a58300400127ea612ec-start_menu.scn

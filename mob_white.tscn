@@ -1,0 +1,203 @@
+[gd_scene load_steps=36 format=3 uid="uid://dw7ktrxyc2iwa"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://61vx0dencwrx" path="res://mob.tres" id="1_5vbif"]
+[ext_resource type="Script" uid="uid://7nsr2us8se17" path="res://mob.gd" id="2_pm01s"]
+[ext_resource type="Texture2D" uid="uid://cqob3mnmscwrf" path="res://assets/mob/animations_white/cleaning_frame01_pix.png" id="3_ajvcn"]
+[ext_resource type="Texture2D" uid="uid://pum5xxo4n6al" path="res://assets/mob/animations_white/cleaning_frame02_pix.png" id="4_24lsj"]
+[ext_resource type="Texture2D" uid="uid://bpbkag5ht3fdf" path="res://assets/mob/animations_white/cleaning_frame03_pix.png" id="5_vvsh0"]
+[ext_resource type="Texture2D" uid="uid://bogua6fdrs77u" path="res://assets/mob/animations_white/cleaning_frame04_pix.png" id="6_62iet"]
+[ext_resource type="Texture2D" uid="uid://bhhgbr2vy3tis" path="res://assets/mob/animations_white/cleaning_frame05_pix.png" id="7_b2n3m"]
+[ext_resource type="Texture2D" uid="uid://bhna30cy3piab" path="res://assets/mob/animations_white/running_frame01_pix.png" id="8_nly2p"]
+[ext_resource type="Texture2D" uid="uid://c1anj3l4ypfao" path="res://assets/mob/animations_white/running_frame02_pix.png" id="9_nric1"]
+[ext_resource type="Texture2D" uid="uid://5h8dn43mc6av" path="res://assets/mob/animations_white/running_frame03_pix.png" id="10_t4usu"]
+[ext_resource type="Texture2D" uid="uid://d0uoo6i22r4h" path="res://assets/mob/animations_white/running_frame04_pix.png" id="11_tpy5o"]
+[ext_resource type="Texture2D" uid="uid://x1yc7dga5qga" path="res://assets/mob/animations_white/running_frame05_pix.png" id="12_htg8s"]
+[ext_resource type="Texture2D" uid="uid://btis10yy0ji2n" path="res://assets/mob/animations_white/sitting_frame01_pix.png" id="13_twpsq"]
+[ext_resource type="Texture2D" uid="uid://b3ljvi8ptancd" path="res://assets/mob/animations_white/sitting_frame02_pix.png" id="14_rsabn"]
+[ext_resource type="Texture2D" uid="uid://be0n1g82dk8y7" path="res://assets/mob/animations_white/sitting_frame03_pix.png" id="15_oisyy"]
+[ext_resource type="Texture2D" uid="uid://c5b2o04xeix4t" path="res://assets/mob/animations_white/splatting_frame01_pix.png" id="16_r7eho"]
+[ext_resource type="Texture2D" uid="uid://deg51y8pawehv" path="res://assets/mob/animations_white/splatting_frame02_pix.png" id="17_cm52b"]
+[ext_resource type="Texture2D" uid="uid://bxke5ns284lot" path="res://assets/mob/animations_white/splatting_frame03_pix.png" id="18_wy4li"]
+[ext_resource type="Texture2D" uid="uid://wpukly2fm1xs" path="res://assets/mob/animations_white/splatting_frame04_pix.png" id="19_jdfsm"]
+[ext_resource type="Texture2D" uid="uid://lm0d32xueaeu" path="res://assets/mob/animations_white/splatting_frame05_pix.png" id="20_6lfyc"]
+[ext_resource type="Texture2D" uid="uid://c1k6o1f3brtpf" path="res://assets/mob/animations_white/splatting_frame06_pix.png" id="21_xyreg"]
+[ext_resource type="Texture2D" uid="uid://dafykevjqc1qj" path="res://assets/mob/animations_white/splatting_frame07_pix.png" id="22_0owjo"]
+[ext_resource type="Texture2D" uid="uid://ca8vfug5la3cn" path="res://assets/mob/animations_white/splatting_frame08_pix.png" id="23_ovgo8"]
+[ext_resource type="Texture2D" uid="uid://nvdkx4wa8chu" path="res://assets/mob/animations_white/waiting_frame01_pix.png" id="24_x7mbu"]
+[ext_resource type="Texture2D" uid="uid://78hfqsli8ngg" path="res://assets/mob/animations_white/waiting_frame02_pix.png" id="25_w8m6x"]
+[ext_resource type="Texture2D" uid="uid://dth66qwxd1o0h" path="res://assets/mob/animations_white/waiting_frame03_pix.png" id="26_7dals"]
+[ext_resource type="Texture2D" uid="uid://bdemvwvbkdmhy" path="res://assets/mob/animations_white/walking_frame01_pix.png" id="27_1k018"]
+[ext_resource type="Texture2D" uid="uid://vy5f6cjkxfpc" path="res://assets/mob/animations_white/walking_frame02_pix.png" id="28_pexbu"]
+[ext_resource type="Texture2D" uid="uid://8xqb8jle5q7b" path="res://assets/mob/animations_white/walking_frame03_pix.png" id="29_u1tlw"]
+[ext_resource type="Texture2D" uid="uid://77afv0opvlyc" path="res://assets/mob/animations_white/walking_frame04_pix.png" id="30_o7a6u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ablnv"]
+load_path = "res://.godot/imported/falling_frame01_pix.png-ba0360c4ac7d204ddf3ca3030663ab37.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ora81"]
+load_path = "res://.godot/imported/falling_frame02_pix.png-8a40964c229d34f7c51010112dea8ad2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mvl7c"]
+load_path = "res://.godot/imported/falling_frame03_pix.png-214c9ed5208e527026a93c679fc8cd88.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p11y5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ajvcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_24lsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vvsh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_62iet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b2n3m")
+}],
+"loop": true,
+"name": &"cleaning",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ablnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ora81")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_mvl7c")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nly2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nric1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t4usu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tpy5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_htg8s")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_twpsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rsabn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oisyy")
+}],
+"loop": true,
+"name": &"sitting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_r7eho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm52b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wy4li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jdfsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6lfyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xyreg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0owjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ovgo8")
+}],
+"loop": false,
+"name": &"splatting",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_x7mbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_w8m6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7dals")
+}],
+"loop": true,
+"name": &"waiting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_1k018")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pexbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_u1tlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_o7a6u")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nokgg"]
+size = Vector2(96, 80)
+
+[node name="MobWhite" type="RigidBody2D" groups=["mobs"]]
+collision_layer = 2
+collision_mask = 13
+physics_material_override = ExtResource("1_5vbif")
+gravity_scale = 0.7
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("2_pm01s")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_p11y5")
+animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nokgg")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="FallTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="FallTimer" to="." method="_on_fall_timer_timeout"]

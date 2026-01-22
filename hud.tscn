@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdpnc4mllxe2h"]
+
+[ext_resource type="Script" uid="uid://3ntpw2cj3v11" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="FontFile" uid="uid://bds41xexwdhpr" path="res://fonts/Pixel Game.otf" id="2_64ctp"]
+[ext_resource type="Texture2D" uid="uid://dlilitr6amu70" path="res://assets/player/heart.png" id="3_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://dq42xfa71m6nl" path="res://assets/mob/score_cat_32x32.png" id="3_640wx"]
+
+[node name="Hud" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_37p78")
+
+[node name="Message" type="Label" parent="."]
+visible = false
+offset_top = 264.0
+offset_right = 1152.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 58
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthLabel" type="Label" parent="."]
+visible = false
+offset_left = 64.0
+offset_right = 368.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 58
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="Hearts" type="HBoxContainer" parent="."]
+offset_left = 16.0
+offset_right = 256.0
+offset_bottom = 64.0
+metadata/_edit_group_ = true
+
+[node name="Heart1" type="Sprite2D" parent="Hearts"]
+position = Vector2(24, 31.999998)
+scale = Vector2(3.5, 3.453)
+texture = ExtResource("3_8sq4i")
+
+[node name="Heart2" type="Sprite2D" parent="Hearts"]
+position = Vector2(72.00001, 32)
+scale = Vector2(3.5, 3.336)
+texture = ExtResource("3_8sq4i")
+
+[node name="Heart3" type="Sprite2D" parent="Hearts"]
+position = Vector2(120, 32)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_8sq4i")
+
+[node name="Heart4" type="Sprite2D" parent="Hearts"]
+position = Vector2(168, 32)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_8sq4i")
+
+[node name="Heart5" type="Sprite2D" parent="Hearts"]
+position = Vector2(216, 32)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_8sq4i")
+
+[node name="ScoreCats" type="HBoxContainer" parent="."]
+offset_left = 592.0
+offset_top = 8.0
+offset_right = 800.0
+offset_bottom = 56.0
+metadata/_edit_group_ = true
+
+[node name="ScoreCat1" type="Sprite2D" parent="ScoreCats"]
+visible = false
+position = Vector2(24, 24)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_640wx")
+
+[node name="ScoreCat2" type="Sprite2D" parent="ScoreCats"]
+visible = false
+position = Vector2(63.999996, 24)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_640wx")
+
+[node name="ScoreCat3" type="Sprite2D" parent="ScoreCats"]
+visible = false
+position = Vector2(103.99999, 24)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_640wx")
+
+[node name="ScoreCat4" type="Sprite2D" parent="ScoreCats"]
+visible = false
+position = Vector2(144, 24)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_640wx")
+
+[node name="ScoreCat5" type="Sprite2D" parent="ScoreCats"]
+visible = false
+position = Vector2(183.99998, 24)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_640wx")

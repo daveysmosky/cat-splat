@@ -1,0 +1,14 @@
+TextureRect
+AudioStreamPlayer2D
+Sprite2D
+AudioStreamPlayer2D      - Matches the "sound" keyword.
+HBoxContainer
+Timer
+CanvasGroup
+CanvasModulate
+Label
+ColorRect
+CanvasLayer
+StaticBody2D
+CollisionShape2D
+Node2D

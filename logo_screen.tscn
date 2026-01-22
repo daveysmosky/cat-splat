@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ttqk4a62xdx"]
+
+[ext_resource type="Script" uid="uid://djfovvyesu1sy" path="res://logo_screen.gd" id="1_8yg8y"]
+[ext_resource type="Texture2D" uid="uid://dt2ta4hpc4bjr" path="res://assets/logo/sinister_grin_pix_invert.png" id="1_jevva"]
+
+[node name="LogoScreen" type="CanvasLayer"]
+script = ExtResource("1_8yg8y")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="LogoSprite" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+texture = ExtResource("1_jevva")
