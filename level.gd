@@ -91,6 +91,7 @@ func _on_player_death() -> void:
 		
 		$GameOverScreen.reset()
 		game_over.emit()
+		$DoDrugs.hide()
 
 
 func _on_mob_cat_splat() -> void:
@@ -144,5 +145,5 @@ func _on_mob_cat_caught() -> void:
 		
 		$LevelForeground.hide()
 		
-		$GameOverScreen.game_over("You Win!", true)
+		$GameOverScreen.game_over("You Win!")
 		player.play_death_animation()

@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func game_over(message = "Game Over!") -> void:
+func game_over(message := "Game Over!") -> void:
 	$GameOverMessage.text = message
 	show()
 	$BlinkTimer.start()

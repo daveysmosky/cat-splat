@@ -65,6 +65,12 @@ func update_score(score):
 func update_health(health):
 	# This section can be improved; maybe use TextureProgress node?
 	match health:
+		0:
+			$Hearts/Heart1.hide()
+			$Hearts/Heart2.hide()
+			$Hearts/Heart3.hide()
+			$Hearts/Heart4.hide()
+			$Hearts/Heart5.hide() 
 		1:
 			$Hearts/Heart1.show()
 			$Hearts/Heart2.hide()

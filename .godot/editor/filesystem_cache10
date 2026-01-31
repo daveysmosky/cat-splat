@@ -1,5 +1,5 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1769045519
+::res://::1769799200
 export_presets.cfg::TextFile::-1::1769045515::0::1::::<><><>0<>0<><>::
 game_over_screen.gd::GDScript::4204873261480509150::1769045367::0::1::::<>ColorRect<><>0<>0<><>::
 hud.gd::GDScript::1993306139766266066::1765227924::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -137,19 +137,20 @@ sprite_0.png::CompressedTexture2D::113318764958454947::1760042859::1760046117::1
 sprite_1.png::CompressedTexture2D::7443965474614022248::1760042859::1760046117::1::::<><><>0<>0<>57611c5726a3f54ef66272f522aad9f5<>res://.godot/imported/sprite_1.png-60198f1a3d44b861bfe71926690df9b8.ctex::
 sprite_2.png::CompressedTexture2D::9220592188537081713::1760042859::1760046117::1::::<><><>0<>0<>6261f0a5796d26165513e62cd33239b7<>res://.godot/imported/sprite_2.png-227bd17338f1bcaa6d709985795b97ed.ctex::
 sprite_3.png::CompressedTexture2D::7258464246174135813::1760042859::1760046117::1::::<><><>0<>0<>0d969ebf86ba501f1d33d3922dd64d4f<>res://.godot/imported/sprite_3.png-41e8ffbefb0761c4e4223464899f7ff5.ctex::
+::res://cat-splat/::1769046606
+::res://docs/::1769046866
+index.144x144.png::CompressedTexture2D::7574064232957270876::1769045514::1769046861::1::::<><><>0<>0<>3ec4912be6314da3f1e34f789372c7fa<>res://.godot/imported/index.144x144.png-92b83f3768c7cca659fbe2ac02cd6924.ctex::
+index.180x180.png::CompressedTexture2D::6756796601408098158::1769045514::1769046861::1::::<><><>0<>0<>e79f9eee6898bc8d1b11175a92530522<>res://.godot/imported/index.180x180.png-df2c9c60e7d0ad994df71f75ff8fc6c4.ctex::
+index.512x512.png::CompressedTexture2D::8176462005561155403::1769045514::1769046861::1::::<><><>0<>0<>d4c5b9e63a436d3fcc0b6954ead6a520<>res://.godot/imported/index.512x512.png-9c95060c3a6daf64e19402e931238c81.ctex::
+index.apple-touch-icon.png::CompressedTexture2D::2871397893945453461::1769045514::1769046861::1::::<><><>0<>0<>f24cc447f974205780ba0727dc50bddf<>res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex::
+index.icon.png::CompressedTexture2D::5856630934262884496::1769045514::1769046861::1::::<><><>0<>0<>ccdcd1183bd1452bad32bf81f099b435<>res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex::
+index.manifest.json::JSON::-1::1769045514::0::1::::<><><>0<>0<><>::
+index.png::CompressedTexture2D::1148542835891624338::1769045514::1769046861::1::::<><><>0<>0<>5228e0301803f150b91cb86361adac95<>res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex::
 ::res://fonts/::1761865980
 FONTLOG.txt::TextFile::-1::1744386698::0::1::::<><><>0<>0<><>::
 LICENSE.txt::TextFile::-1::1744386698::0::1::::<><><>0<>0<><>::
 Pixel Game.otf::FontFile::2635954452902840579::1760735321::1760735321::1::::<><><>0<>0<>461df6fa4cfca9936e8cf6869abe1f47<>res://.godot/imported/Pixel Game.otf-cb4251263f4b518ed088c95353374233.fontdata::
 Xolonium-Regular.ttf::FontFile::7651571627497649129::1744386698::1759606897::1::::<><><>0<>0<>cfa3bad3e5506df45a8eb0cdd7a12d14<>res://.godot/imported/Xolonium-Regular.ttf-bc2981e3069cff4c34dd7c8e2bb73fba.fontdata::
-::res://html5/::1769045519
-index.144x144.png::CompressedTexture2D::7574064232957270876::1769045514::1769045551::1::::<><><>0<>0<>33c9bb1148bd2aa596d88e96397dd14e<>res://.godot/imported/index.144x144.png-b4bc332277d41e740a727c7aa1687369.ctex::
-index.180x180.png::CompressedTexture2D::6756796601408098158::1769045514::1769045551::1::::<><><>0<>0<>d5078ce743a47a2e7e029e55f4ed4c64<>res://.godot/imported/index.180x180.png-8ec73510c4573448b9bfafa2ebcdcdc2.ctex::
-index.512x512.png::CompressedTexture2D::8176462005561155403::1769045514::1769045551::1::::<><><>0<>0<>ecf74bc827ab1f684920ab2a7721eb35<>res://.godot/imported/index.512x512.png-74afa010df1c9fa55e03290d1c06d099.ctex::
-index.apple-touch-icon.png::CompressedTexture2D::2871397893945453461::1769045514::1769045551::1::::<><><>0<>0<>ec3147a045b1ee8a0d93d8b3f1c8f0a3<>res://.godot/imported/index.apple-touch-icon.png-f81c1118ec62bafcdf04eca4cf2ed62e.ctex::
-index.icon.png::CompressedTexture2D::5856630934262884496::1769045514::1769045551::1::::<><><>0<>0<>f78c6b7a591e28153c5f4e015cdc1063<>res://.godot/imported/index.icon.png-328fa7690259ee53115d8b5c9c4dfee3.ctex::
-index.manifest.json::JSON::-1::1769045514::0::1::::<><><>0<>0<><>::
-index.png::CompressedTexture2D::1148542835891624338::1769045514::1769045551::1::::<><><>0<>0<>9666d6fb0f6fe2fa76164d7e9f090c74<>res://.godot/imported/index.png-f3c8fe1ff4f7b5205176b2dbf8cc6f9e.ctex::
 ::res://icons/::1769042268
 icon.svg::CompressedTexture2D::5565076142721386751::1759606836::1769042255::1::::<><><>0<>0<>4ae5dd0cf34a65cc8be9d654ffebc883<>res://.godot/imported/icon.svg-3629612f1967f9e645af99eed2b8b758.ctex::
 score_cat_144x144.png::CompressedTexture2D::2325805969833645084::1769042262::1769042263::1::::<><><>0<>0<>f0299a4a512e4129896887977f424024<>res://.godot/imported/score_cat_144x144.png-a5a652e65e9ff7349ddaa55df7a9497f.ctex::
